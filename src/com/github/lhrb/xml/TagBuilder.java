@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BaseTag implements Tag
+public class TagBuilder implements Tag
 {
     private final String name;
     private final List<Attribute> attributes;
 
-    BaseTag(String name)
+    TagBuilder(String name)
     {
         this.name = name;
         attributes = new ArrayList<>();
     }
 
-    public BaseTag attr(String name, String value) {
+    public TagBuilder attr(String name, String value) {
         attributes.add(new Attribute(name, value));
         return this;
     }
@@ -30,8 +30,6 @@ public class BaseTag implements Tag
 
     @Override
     public String xmlString(Integer depth) {
-
-
         return "";
     }
 }

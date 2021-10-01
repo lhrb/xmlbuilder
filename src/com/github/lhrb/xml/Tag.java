@@ -5,8 +5,8 @@ import java.util.List;
 public interface Tag {
     String xmlString(Integer depth);
 
-    static BaseTag create(String name) {
-        return new BaseTag(name);
+    static TagBuilder create(String name) {
+        return new TagBuilder(name);
     }
 
     static String depthToSpacePrefix(Integer depth) {
