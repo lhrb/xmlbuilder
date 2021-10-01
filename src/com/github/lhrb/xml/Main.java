@@ -8,13 +8,13 @@ public class Main {
         System.out.println(
                 Tag.create("node")
                         .attr("name", "value")
-                        .childs(
+                        .children(
                                 Tag.create("child")
                                         .attr("a", "b").attr("e", "f")
                                         .text("hallo"),
                                 Tag.create("nestedChild")
                                         .attr("c", "d")
-                                        .childs(Tag.create("leaf").text("leafNode")))
+                                        .children(Tag.create("leaf").text("leafNode")))
                         .xmlString(0));
 
         System.out.println(

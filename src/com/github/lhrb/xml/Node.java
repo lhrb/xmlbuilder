@@ -5,16 +5,16 @@ import java.util.List;
 public class Node implements Tag {
     private final String name;
     private final List<Attribute> attributes;
-    private final List<Tag> childs;
+    private final List<Tag> children;
 
-    private Node(String name, List<Attribute> attributes, List<Tag> childs) {
+    private Node(String name, List<Attribute> attributes, List<Tag> children) {
         this.name = name;
         this.attributes = attributes;
-        this.childs = childs;
+        this.children = children;
     }
 
-    static Tag create(String name, List<Attribute> attributes, List<Tag> childs) {
-        return new Node(name, attributes, childs);
+    static Tag create(String name, List<Attribute> attributes, List<Tag> children) {
+        return new Node(name, attributes, children);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Node implements Tag {
 
         stringBuilder.append(start);
 
-        for (Tag c : childs) {
+        for (Tag c : children) {
             stringBuilder.append(c.xmlString(depth + 1));
         }
 

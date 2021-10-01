@@ -24,8 +24,8 @@ public class TagBuilder implements Tag
         return Leaf.create(name, attributes, text);
     }
 
-    public Tag childs(Tag... childs) {
-        return Node.create(name, attributes, Arrays.asList(childs));
+    public Tag children(Tag... children) {
+        return Node.create(name, attributes, Arrays.asList(children));
     }
 
     @Override
